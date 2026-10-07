@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Thành Viên Tông Môn</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/member.css') }}" >
+
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <div class="navbar">
+
+        <div class="logo">
+
+            👥 HUYỀN LINH TÔNG
+
+        </div>
+
+        <div class="menu">
+
+            <a href="/home">
+                Trang chủ
+            </a>
+
+            <a href="/mission">
+                Nhiệm vụ
+            </a>
+
+            <a href="/member">
+                Thành viên
+            </a>
+
+            <a href="/login">
+                Đăng xuất
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <div class="header">
+
+        <h1>
+
+            👑 DANH SÁCH THÀNH VIÊN
+
+        </h1>
+
+        <p>
+
+            Các thành viên hiện đang thuộc Huyền Linh Tông
+
+        </p>
+
+    </div>
+
+
+    <!-- ================= MEMBERS ================= -->
+
+    <div class="members">
+
+
+        {% for user in users %}
+
+        <div class="member-card">
+
+            <!-- AVATAR -->
+            <div class="avatar">
+
+                👤
+
+            </div>
+
+
+            <!-- USERNAME -->
+            <h2>
+
+                {{ user["TenTaiKhoan"] }}
+
+            </h2>
+
+
+            <!-- PHONE -->
+            <div class="phone">
+
+                📞 {{ user["Phone"] }}
+
+            </div>
+
+
+            <!-- ROLE -->
+            <div class="role">
+
+                Thành viên
+
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+
+    </div>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        © Huyền Linh Tông - Danh sách thành viên
+
+    </footer>
+
+</body>
+</html>

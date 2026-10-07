@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Trang chủ</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/home.css') }}"
+    >
+
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <div class="navbar">
+
+        <div class="logo">
+            🌐 HUYÊN LINH TÔNG
+        </div>
+
+        <div class="menu">
+
+            <a href="/home">
+                Trang chủ
+            </a>
+
+            <a href="/service">
+                Dịch vụ
+            </a>
+
+            <a href="/contact">
+                Liên hệ
+            </a>
+
+            <a href="/login">
+                Đăng xuất
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= HERO ================= -->
+
+    <div class="hero">
+
+        <h1>
+            Chào mừng đến với Website của Huyền Linh Tông
+        </h1>
+
+        <a href="/service" class="btn">
+
+            Khám phá ngay
+
+        </a>
+
+    </div>
+
+
+    <!-- ================= CARDS ================= -->
+
+    <div class="cards">
+
+        <!-- CARD 1 -->
+        <div class="card">
+
+            <h2>
+                👤 Hồ sơ
+            </h2>
+
+            <p>
+                Xem và chỉnh sửa thông tin cá nhân của bạn
+            </p>
+
+            <a href="/username" class="btn">
+
+                Xem thêm
+
+            </a>
+
+        </div>
+
+
+        <!-- CARD 2 -->
+        <div class="card">
+
+            <h2>
+                ⚡ Nhiệm vụ
+            </h2>
+
+            <p>
+                nhận nhiệm vụ và thử thách của tông môn hàng ngày
+            </p>
+
+            <a href="/mission" class="btn">
+
+                Xem thêm
+
+            </a>
+
+        </div>
+
+
+        <!-- CARD 3 -->
+        <div class="card">
+
+            <h2>
+                📊 Thành Viên
+            </h2>
+
+            <p>
+                Xem thông tin và hoạt động của các thành viên trong tông môn
+            </p>
+
+            <a href="/member" class="btn">
+
+                Xem thêm
+
+            </a>
+
+        </div>
+
+
+        <!-- CARD 4 -->
+        <div class="card">
+
+            <h2>
+                📜 Tàng Thư Các
+            </h2>
+
+            <p>
+                Xem công pháp, điển tịch của tông môn
+            </p>
+
+            <a href="/library" class="btn">
+
+                Xem thêm
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        © Huyen Linh Tong chấp pháp điện điện chủ THIÊN DẬT
+
+    </footer>
+
+</body>
+</html>

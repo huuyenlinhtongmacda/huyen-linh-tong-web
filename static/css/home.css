@@ -1,0 +1,247 @@
+/* ================= RESET ================= */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body{
+    background: #f4f6f9;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+
+    width: 100%;
+
+    background: #007bff;
+
+    color: white;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 15px 30px;
+}
+
+
+/* LOGO */
+
+.logo{
+
+    font-size: 26px;
+
+    font-weight: bold;
+}
+
+
+/* MENU */
+
+.menu{
+
+    display: flex;
+
+    gap: 20px;
+}
+
+.menu a{
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    transition: 0.3s;
+}
+
+.menu a:hover{
+
+    color: gold;
+}
+
+
+/* ================= HERO ================= */
+
+.hero{
+
+    height: 350px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    background: linear-gradient(
+        to right,
+        #007bff,
+        #00c6ff
+    );
+
+    color: white;
+}
+
+
+/* HERO TITLE */
+
+.hero h1{
+
+    font-size: 50px;
+
+    margin-bottom: 15px;
+}
+
+
+/* HERO TEXT */
+
+.hero p{
+
+    font-size: 20px;
+
+    margin-bottom: 20px;
+}
+
+
+/* ================= BUTTON ================= */
+
+.btn{
+
+    display: inline-block;
+
+    padding: 10px 20px;
+
+    border-radius: 6px;
+
+    background: white;
+
+    color: #007bff;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.btn:hover{
+
+    background: #f1f1f1;
+
+    transform: scale(1.05);
+}
+
+
+/* ================= CARDS ================= */
+
+.cards{
+
+    width: 90%;
+
+    margin: 40px auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(300px,1fr));
+
+    gap: 20px;
+}
+
+
+/* ================= CARD ================= */
+
+.card{
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 0 10px rgba(0,0,0,0.1);
+
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+.card:hover{
+
+    transform: translateY(-5px);
+}
+
+
+/* CARD ICON */
+
+.card-icon{
+
+    font-size: 60px;
+
+    margin-bottom: 15px;
+}
+
+
+/* CARD TITLE */
+
+.card h2{
+
+    margin-bottom: 15px;
+
+    color: #333;
+}
+
+
+/* CARD TEXT */
+
+.card p{
+
+    color: #666;
+
+    margin-bottom: 20px;
+
+    line-height: 1.5;
+}
+
+
+/* CARD BUTTON */
+
+.card .btn{
+
+    background: #007bff;
+
+    color: white;
+}
+
+.card .btn:hover{
+
+    background: #0056b3;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer{
+
+    background: #222;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+
+    margin-top: 50px;
+}

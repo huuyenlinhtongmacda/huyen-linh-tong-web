@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông tin người dùng</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/username.css') }}">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <div class="navbar">
+
+        <div class="logo">
+            👑 USER PANEL
+        </div>
+
+        <div class="menu">
+
+            <a href="/home">Trang chủ</a>
+
+            <a href="/service">Dịch vụ</a>
+
+            <a href="/contact">Liên hệ</a>
+
+            <a href="/login">Đăng xuất</a>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= PROFILE ================= -->
+
+    <div class="profile-box">
+
+        <!-- AVATAR -->
+        <div class="avatar">
+            👤
+        </div>
+
+        <h1>Thông tin người dùng</h1>
+
+        <div class="info">
+
+            <!-- USERNAME -->
+            <div class="item">
+
+                <div class="label">
+                    Tên đăng nhập
+                </div>
+
+                <div class="value">
+                    {{ username }}
+                </div>
+
+            </div>
+
+
+            <!-- PHONE -->
+            <div class="item">
+
+                <div class="label">
+                    Số điện thoại
+                </div>
+
+                <div class="value">
+                    {{ phone }}
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

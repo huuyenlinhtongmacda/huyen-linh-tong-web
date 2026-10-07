@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin - Quản lý tài khoản</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>👑 Admin - Quản lý tài khoản</h1>
+
+    <span class="badge">
+        Tổng tài khoản: {{ users|length }}
+    </span>
+
+    <!-- SEARCH -->
+    <input
+        type="text"
+        id="search"
+        placeholder="Tìm kiếm tài khoản..."
+    >
+
+    <!-- ================= USERS ================= -->
+    <table>
+
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Tài khoản</th>
+                <th>Mật khẩu</th>
+                <th>Số điện thoại</th>
+                <th>Hành động</th>
+            </tr>
+        </thead>
+
+        <tbody id="tableBody">
+
+            {% for u in users %}
+            <tr>
+
+                <td>{{ loop.index }}</td>
+
+                <td>{{ u.TenTaiKhoan }}</td>
+
+                <td>{{ u.MatKhau }}</td>
+
+                <td>{{ u.Phone }}</td>
+
+                <td>
+
+                    <!-- DELETE -->
+                    <form
+                        method="POST"
+                        action="/delete_user"
+                        style="display:inline;"
+                    >
+
+                        <input
+                            type="hidden"
+                            name="username"
+                            value="{{ u.TenTaiKhoan }}"
+                        >
+
+                        <button
+                            type="submit"
+                            class="btn-delete"
+                            onclick="return confirm('Bạn có chắc muốn xóa?')"
+                        >
+                            Xóa
+                        </button>
+
+                    </form>
+
+                </td>
+
+            </tr>
+            {% endfor %}
+
+        </tbody>
+
+    </table>
+
+
+    <!-- ================= DELETED USERS ================= -->
+    <h2>🗑 Tài khoản đã xóa</h2>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>Tài khoản</th>
+                <th>Mật khẩu</th>
+                <th>Số điện thoại</th>
+                <th>Khôi phục</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            {% for u in deleted %}
+            <tr>
+
+                <td>{{ u.TenTaiKhoan }}</td>
+
+                <td>{{ u.MatKhau }}</td>
+
+                <td>{{ u.Phone }}</td>
+
+                <td>
+
+                    <!-- RESTORE -->
+                    <form
+                        method="POST"
+                        action="/restore_user"
+                    >
+
+                        <input
+                            type="hidden"
+                            name="username"
+                            value="{{ u.TenTaiKhoan }}"
+                        >
+
+                        <button
+                            type="submit"
+                            class="btn-restore"
+                        >
+                            Khôi phục
+                        </button>
+
+                    </form>
+
+                </td>
+
+            </tr>
+            {% endfor %}
+
+        </tbody>
+
+    </table>
+
+</div>
+<h2>📥 Hộp thư báo cáo</h2>
+
+<table>
+
+    <thead>
+
+        <tr>
+
+            <th>ID</th>
+
+            <th>Họ tên</th>
+
+            <th>Chức vụ</th>
+
+            <th>Vị trí</th>
+
+            <th>Nội dung</th>
+
+            <th>Xóa</th>
+
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+        {% for r in reports %}
+
+        <tr>
+
+            <td>{{ r.id }}</td>
+
+            <td>{{ r.name }}</td>
+
+            <td>{{ r.role }}</td>
+
+            <td>{{ r.location }}</td>
+
+            <td>{{ r.content }}</td>
+
+            <td>
+
+                <form
+                    method="POST"
+                    action="/delete_report"
+                >
+
+                    <input
+                        type="hidden"
+                        name="id"
+                        value="{{ r.id }}"
+                    >
+
+                    <button
+                        type="submit"
+                        class="btn-delete"
+
+                        onclick="
+                            return confirm('Xóa báo cáo này?')
+                        "
+                    >
+                        Xóa
+                    </button>
+
+                </form>
+
+            </td>
+
+        </tr>
+
+        {% endfor %}
+
+    </tbody>
+
+</table>
+
+<!-- ================= SEARCH JS ================= -->
+<script src="{{ url_for('static', filename='js/admin.js') }}"></script>
+
+</body>
+</html>

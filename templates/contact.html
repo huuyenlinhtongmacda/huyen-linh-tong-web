@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên hệ - Báo cáo</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
+
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <div class="navbar">
+
+        <div class="logo">
+            💎 HUYỄN LINH TÔNG
+        </div>
+
+        <div class="menu">
+
+            <a href="/home">Trang chủ</a>
+
+            <a href="/service">Dịch vụ</a>
+
+            <a href="/contact">Liên hệ</a>
+
+            <a href="/login">Đăng xuất</a>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= FORM ================= -->
+
+    <div class="container">
+
+        <h1>📋 Nội dung báo cáo</h1>
+
+        <form method="POST">
+
+            <!-- TÊN -->
+            <label>
+                Họ và tên
+            </label>
+
+            <input
+                type="text"
+                name="name"
+                placeholder="Nhập họ và tên..."
+                required
+            >
+
+            <!-- CHỨC VỤ -->
+            <label>
+                Thân phận
+            </label>
+
+            <input
+                type="text"
+                name="role"
+                placeholder="Nhập thân phận..."
+                required
+            >
+
+            <!-- VỊ TRÍ -->
+            <label>
+                Nơi Ở HIEN TẠI
+            </label>
+
+            <input
+                type="text"
+                name="location"
+                placeholder="Nhập nơi ở hiện tại..."
+                required
+            >
+
+            <!-- NỘI DUNG -->
+            <label>
+                Nội dung báo cáo
+            </label>
+
+            <textarea
+                name="content"
+                placeholder="Nhập nội dung báo cáo..."
+                required
+            ></textarea>
+
+            <!-- BUTTON -->
+            <button type="submit">
+
+                Gửi báo cáo
+
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        © Huyen Linh Tong chấp pháp điện điện chủ THIÊN DẬT
+
+    </footer>
+
+</body>
+</html>

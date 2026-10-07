@@ -1,0 +1,264 @@
+/* ================= RESET ================= */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body{
+    background: #f4f6f9;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+
+    width: 100%;
+
+    background: #111;
+
+    color: white;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 15px 30px;
+}
+
+
+/* LOGO */
+
+.logo{
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    color: gold;
+}
+
+
+/* MENU */
+
+.menu{
+
+    display: flex;
+
+    gap: 20px;
+}
+
+.menu a{
+
+    color: white;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.menu a:hover{
+
+    color: gold;
+}
+
+
+/* ================= HEADER ================= */
+
+.header{
+
+    height: 260px;
+
+    background: linear-gradient(
+        to right,
+        #ff9800,
+        #ff5722
+    );
+
+    color: white;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+.header h1{
+
+    font-size: 50px;
+
+    margin-bottom: 15px;
+}
+
+.header p{
+
+    font-size: 20px;
+}
+
+
+/* ================= MISSIONS ================= */
+
+.missions{
+
+    width: 90%;
+
+    margin: 40px auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px,1fr));
+
+    gap: 25px;
+}
+
+
+/* ================= CARD ================= */
+
+.mission-card{
+
+    background: white;
+
+    border-radius: 15px;
+
+    padding: 25px;
+
+    text-align: center;
+
+    box-shadow:
+        0 0 15px rgba(0,0,0,0.1);
+
+    transition: 0.3s;
+}
+
+.mission-card:hover{
+
+    transform: translateY(-8px);
+}
+
+
+/* ================= RANK ================= */
+
+.rank{
+
+    display: inline-block;
+
+    padding: 8px 15px;
+
+    border-radius: 20px;
+
+    color: white;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+.bronze{
+    background: #cd7f32;
+}
+
+.silver{
+    background: #9e9e9e;
+}
+
+.gold{
+    background: #ffc107;
+    color: black;
+}
+
+.legend{
+    background: #e91e63;
+}
+
+
+/* ================= TEXT ================= */
+
+.mission-card h2{
+
+    margin-bottom: 15px;
+
+    color: #333;
+}
+
+.mission-card p{
+
+    color: #666;
+
+    margin-bottom: 20px;
+
+    line-height: 1.5;
+}
+
+
+/* ================= REWARD ================= */
+
+.reward{
+
+    background: #f1f1f1;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    margin-bottom: 20px;
+
+    font-weight: bold;
+
+    color: #ff5722;
+}
+
+
+/* ================= BUTTON ================= */
+
+.mission-card button{
+
+    padding: 12px 20px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #007bff;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.mission-card button:hover{
+
+    background: #0056b3;
+
+    transform: scale(1.05);
+}
+
+
+/* ================= FOOTER ================= */
+
+footer{
+
+    background: #111;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+
+    margin-top: 50px;
+}
